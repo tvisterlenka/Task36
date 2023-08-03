@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="Второй коммит. Что успела к 12">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/ShopilandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ShopilandPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" afterDir="false" />
     </list>
@@ -63,15 +58,15 @@
       <recent name="C:\Users\tvist\IdeaProjects\Task36\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: enter correct data without promo code (1)">
-    <configuration name="Feature: example" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: sf">
+    <configuration name="Feature: sf" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/example.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/sf.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: example" />
+      <option name="SUGGESTED_NAME" value="Feature: sf" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -164,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: sf" />
+        <item itemvalue="Cucumber Java.Feature: skillfactory" />
         <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code (1)" />
         <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code" />
         <item itemvalue="Cucumber Java.Scenario: enter correct data" />
-        <item itemvalue="Cucumber Java.Feature: skillfactory" />
-        <item itemvalue="Cucumber Java.Feature: example" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691038647050</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Второй коммит. Что успела к 12">
+      <created>1691053283535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691053283535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

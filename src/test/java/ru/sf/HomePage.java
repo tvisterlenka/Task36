@@ -29,7 +29,7 @@ public class HomePage {
         webDriver.findElement(By.cssSelector(TESTING)).click();
     }
 
-    public void enterCityFrom(String cityFrom) {
+    /*public void enterCityFrom(String cityFrom) {
         webDriver.findElement(By.id(CITY_FROM)).sendKeys(cityFrom);
         webDriver.findElements(By.className(SELECT_CITY_FROM)).get(1).click();
     }
@@ -50,5 +50,5 @@ public class HomePage {
     public void assertThatUserGotTheMessage(String errorMessage) {
         final String actualMessage = webDriver.findElement(By.id(FROM_EMPTY)).getText();
         assertEquals (errorMessage, actualMessage);
-    }
+    }*/
 }

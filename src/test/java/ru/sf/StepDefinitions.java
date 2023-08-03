@@ -321,57 +321,68 @@ public class StepDefinitions {
     }
 
     @When("the site is open enter email {string}")
-    public void theSiteIsOpenEnterEmailTestGmailCom() {
-        qajaCoursePage
+    public void theSiteIsOpenEnterEmailTestGmailCom(String email) {
+        qajaCoursePage.theSiteIsOpenEnterEmailTestGmailCom(email);
     }
 
     @Then("assert that user sees incorrect email notification {string}")
     public void assertThatUserSeesIncorrectEmailNotification(String incorrectEmailNotification) {
-        qajaCoursePage.assertUserSeesIncorrectEmailNotification(incorrectEmailNotification)
+        qajaCoursePage.assertUserSeesIncorrectEmailNotification(incorrectEmailNotification);
     }
 
     @Then("assert that user sees incorrect phone number notification {string}")
-    public void assertThatUserSeesIncorrectPhoneNumberNotification(String arg0) {
+    public void assertThatUserSeesIncorrectPhoneNumberNotification(String incorrectPhoneNumberNotification) {
+        qajaCoursePage.assertUserSeesIncorrectPhoneNumberNotification(incorrectPhoneNumberNotification);
     }
 
     @Then("assert that user sees too short phone number notification {string}")
-    public void assertThatUserSeesTooShortPhoneNumberNotification(String arg0) {
+    public void assertThatUserSeesTooShortPhoneNumberNotification(String tooShortPhoneNumberNotification) {
+        qajaCoursePage.assertUserSeesTooShortPhoneNumberNotification(tooShortPhoneNumberNotification);
     }
 
     @Then("assert that length of this phone number is correct")
     public void assertThatLengthOfThisPhoneNumberIsCorrect() {
+        qajaCoursePage.assertThatLengthOfThisPhoneNumberIsCorrect();
     }
 
     @When("the site is open untick the agreement box")
     public void theSiteIsOpenUntickTheAgreementBox() {
+        qajaCoursePage.theSiteIsOpenUntickTheAgreementBox();
     }
 
     @Then("assert that user sees error notification")
     public void assertThatUserSeesErrorNotification() {
+        qajaCoursePage.assertUserSeesErrorNotification();
     }
 
     @Then("click the button Выбрать тариф Базовый")
     public void clickTheButtonВыбратьТарифБазовый() {
+        qajaCoursePage.clickTheButtonВыбратьТарифБазовый();
     }
 
     @Then("assert that user sees page1 {string}")
-    public void assertThatUserSeesPage1(String url) {
+    public void assertThatUserSeesPage1(String header1) {
+        qajaCoursePage.assertThatUserSeesPage1(header1);
     }
 
     @When("the site is open click the button Выбрать тариф Оптимальный")
     public void theSiteIsOpenClickTheButtonВыбратьТарифОптимальный() {
+        qajaCoursePage.theSiteIsOpenClickTheButtonВыбратьТарифОптимальный();
     }
 
     @Then("assert that user sees page2 {string}")
-    public void assertThatUserSeesPage2(String url) {
+    public void assertThatUserSeesPage2(String header2) {
+        qajaCoursePage.assertThatUserSeesPage2(header2);
     }
 
     @When("the site is open click the button Выбрать тариф VIP")
     public void theSiteIsOpenClickTheButtonВыбратьТарифVIP() {
+        qajaCoursePage.theSiteIsOpenClickTheButtonВыбратьТарифVIP();
     }
 
     @Then("assert that user sees page3 {string}")
-    public void assertThatUserSeesPage3(String url) {
+    public void assertThatUserSeesPage3(String header3) {
+        qajaCoursePage.assertThatUserSeesPage3(header3);
     }
 
     @When("the site is open enter phone number {string}")

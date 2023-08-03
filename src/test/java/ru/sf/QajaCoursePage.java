@@ -2,6 +2,7 @@ package ru.sf;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -323,7 +324,41 @@ public class QajaCoursePage {
         assertEquals (EXPECTED_NOTIFICATION, actualErrorNotification);
         webDriver.close();
     }
-    public void assertThatUserSees(String arg0) {
+
+    public void theSiteIsOpenEnterEmailTestGmailCom(String email) {
+        webDriver.findElement(By.cssSelector(EMAIL_BOX)).sendKeys(email);
+    }
+
+    public void clickTheButtonВыбратьТарифБазовый() {
+        webDriver.findElement(By.cssSelector("#sbs-426327183-1620729847547 > a")).click();
+    }
+    public void assertThatUserSeesPage1(String header1) {
+        final String currentPopUpPage = webDriver.findElement(By.xpath("/html/body/div[2]/div[86]/div/div/div[1]/div/div/div")).getText();
+        System.out.println(currentPopUpPage);
+        assertEquals (header1, currentPopUpPage);
+        webDriver.close();
+    }
+
+    public void theSiteIsOpenClickTheButtonВыбратьТарифОптимальный() {
+        webDriver.findElement(By.cssSelector("#sbs-426327183-1620730172361 > a")).click();
+    }
+
+    public void assertThatUserSeesPage2(String header2) {
+        final String currentPopUpPage = webDriver.findElement(By.xpath("/html/body/div[2]/div[87]/div/div/div[1]/div/div/div")).getText();
+        System.out.println(currentPopUpPage);
+        assertEquals (header2, currentPopUpPage);
+        webDriver.close();
+    }
+
+    public void theSiteIsOpenClickTheButtonВыбратьТарифVIP() {
+        webDriver.findElement(By.cssSelector("#sbs-426327183-1620730221326 > a")).click();
+    }
+
+    public void assertThatUserSeesPage3(String header3) {
+        final String currentPopUpPage = webDriver.findElement(By.xpath("/html/body/div[2]/div[88]/div/div/div[1]/div/div/div")).getText();
+        System.out.println(currentPopUpPage);
+        assertEquals (header3, currentPopUpPage);
+        webDriver.close();
     }
 
 }
