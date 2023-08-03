@@ -44,7 +44,6 @@ public class StepDefinitions {
     public void url_of_skill_factory(String url) {
         homePage.go(url);
     }
-
     @When("the site is open click the tag Тестирование")
     public void the_site_is_open_click_the_tag_тестирование() {
         homePage.clickTesting();
@@ -52,17 +51,6 @@ public class StepDefinitions {
     @Then("click Тестировщик на Java")
     public void click_тестировщик_на_java() {
         testingCoursesPage.clickQAJA();
-
-    /*String parentHandle = webDriver.getWindowHandle();
-        for (String handle: webDriver.getWindowHandles()) {
-            if (!parentHandle.equals(handle))
-                webDriver.switchTo().window(handle);
-                String currentUrl = webDriver.getCurrentUrl();
-                System.out.println("URL of child window is " + currentUrl);
-        }*/
-//        webDriver.switchTo().(WindowType.TAB);
-//        webDriver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
-//        System.out.println(webDriver.getTitle());
     }
     @Then("click the button Записаться на курс")
     public void clickTheButtonЗаписатьсяНаКурс() {
@@ -80,45 +68,6 @@ public class StepDefinitions {
     public void set_phone_number(String number) {
         qajaCoursePage.setPhoneNumber(number);
     }
-
-//        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        TimeUnit.SECONDS.sleep(10);;
-        /*WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(By.id("#recaptcha-anchor")));*/
-        //new WebDriverWait(webDriver, Duration.ofSeconds(20)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
-        //new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.recaptcha-checkbox-checkmark"))).click();
-//        String.valueOf(webDriver.findElements(By.tagName("iframe")).size());
-        //public void clickAt($locator, "10,20")
-       /* Point loc = MouseInfo.getPointerInfo().getLocation();
-        double x = loc.getX();
-        double y = loc.getY();
-        System.out.println("x=" + x);
-        System.out.println("y=" + y);
-        String text = String.valueOf(webDriver.findElements(By.tagName("iframe")).size());
-        System.out.println("Number of iframes is " + text);
-        List<WebElement> iframes = webDriver.findElements(By.tagName("iframe"));
-        System.out.println("List of iframes" + iframes);
-    }*/
-//        webDriver.findElement(By.xpath("/html/body/script[3]")).click();
-        /*String mainWindowHandle = webDriver.getWindowHandle();
-        Set<String> allWindowHandles = webDriver.getWindowHandles();
-        Iterator<String> iterator = allWindowHandles.iterator();
-
-        // Here we will check if child window has other child windows and will fetch the heading of the child window
-        while (iterator.hasNext()) {
-            String ChildWindow = iterator.next();
-            if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
-                webDriver.switchTo().window(ChildWindow);
-                String text = webDriver.getCurrentUrl();
-                System.out.println("Heading of child window is " + text);
-            }
-//        webDriver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
-    }*/
-    /*@Then("assert that user sees {string}")
-    public void assert_that_user_sees(String checkTheBoxHuman) {
-        final String actualString = webDriver.findElement(By.xpath("/html/body/table/tbody/tr/td/div[1]")).getText();
-        assertEquals(checkTheBoxHuman, actualString);
-    }*/
     @Then("assert that user got {string}")
     public void assert_that_user_got(String detailedCourseProgram) {
 //        final String actualString = webDriver.findElement(By.cssSelector("#rec600706268 > div > div > div.t396__elem.tn-elem.tn-elem__6007062681677770138193 > div")).getText();
@@ -170,19 +119,6 @@ public class StepDefinitions {
     @Then("click the button Получить программу")
     public void click_the_button_получить_программу() {
         qajaCoursePage.clickGetProgram();
-       /* String mainWindowHandle = webDriver.getWindowHandle();
-        Set<String> allWindowHandles = webDriver.getWindowHandles();
-        Iterator<String> iterator = allWindowHandles.iterator();
-
-        // Here we will check if child window has other child windows and will fetch the heading of the child window
-        while (iterator.hasNext()) {
-            String ChildWindow = iterator.next();
-            if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
-                webDriver.switchTo().window(ChildWindow);
-                String text = webDriver.getCurrentUrl();
-                System.out.println("URL of child window is " + text);
-            }
-        }*/
     }
 
     @Then("assert that user got notification")
@@ -281,15 +217,6 @@ public class StepDefinitions {
         qajaCoursePage.enterPhoneNumber(number);
     }
 
-    /*@And("enter promo code")
-    public void enterPromoCode(String promoCode) {
-        qajaCoursePage.enterPromoCode(promoCode);
-    }
-
-    @Then("assert that user sees {string}")
-    public void assertThatUserSees(String arg0) {
-    }*/
-
     @And("enter promo code {string}")
     public void enterPromoCodeTest(String promoCode) {
         qajaCoursePage.enterPromoCode(promoCode);
@@ -311,8 +238,8 @@ public class StepDefinitions {
     }
 
     @Then("assert that user sees notification")
-    public void assertThatUserSeesNotification(String notification) {
-        qajaCoursePage.assertThatUserSeesNotification(notification);
+    public void assertThatUserSeesNotification() {
+        qajaCoursePage.assertThatUserSeesNotification();
     }
 
     @Then("assert that user sees set name notification {string}")
@@ -355,106 +282,8 @@ public class StepDefinitions {
         qajaCoursePage.assertUserSeesErrorNotification();
     }
 
-    @Then("click the button Выбрать тариф Базовый")
-    public void clickTheButtonВыбратьТарифБазовый() {
-        qajaCoursePage.clickTheButtonВыбратьТарифБазовый();
-    }
-
-    @Then("assert that user sees page1 {string}")
-    public void assertThatUserSeesPage1(String header1) {
-        qajaCoursePage.assertThatUserSeesPage1(header1);
-    }
-
-    @When("the site is open click the button Выбрать тариф Оптимальный")
-    public void theSiteIsOpenClickTheButtonВыбратьТарифОптимальный() {
-        qajaCoursePage.theSiteIsOpenClickTheButtonВыбратьТарифОптимальный();
-    }
-
-    @Then("assert that user sees page2 {string}")
-    public void assertThatUserSeesPage2(String header2) {
-        qajaCoursePage.assertThatUserSeesPage2(header2);
-    }
-
-    @When("the site is open click the button Выбрать тариф VIP")
-    public void theSiteIsOpenClickTheButtonВыбратьТарифVIP() {
-        qajaCoursePage.theSiteIsOpenClickTheButtonВыбратьТарифVIP();
-    }
-
-    @Then("assert that user sees page3 {string}")
-    public void assertThatUserSeesPage3(String header3) {
-        qajaCoursePage.assertThatUserSeesPage3(header3);
-    }
-
     @When("the site is open enter phone number {string}")
     public void theSiteIsOpenEnterPhoneNumber(String number) {
         qajaCoursePage.enterPhoneNumber(number);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*String parentHandle = webDriver.getWindowHandle();
-        for (String nowHandle: webDriver.getWindowHandles()) {
-            if (!parentHandle.equals(nowHandle))
-                webDriver.switchTo().window(nowHandle);*//*
-            *//*webDriver.switchTo().frame("popupFrame")*//*
-        *//*webDriver.switchTo().frame("buttonframe");
-        final String actualString = webDriver.findElement(By.cssSelector("body > table > tbody > tr > td > div:nth-child(1)")).getText();
-        assertEquals (detailedCourseProgram, actualString);*//*
-//            webDriver.findElement(By.id("recaptchabox"));
-        *//*new WebDriverWait(webDriver, Duration.ofSeconds(20)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
-        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.recaptcha-checkbox-checkmark"))).click();*//*
-    }*/
-
-
-    /*@Given("url of Russian Railways: {string}")
-    public void url_of_russian_railways(String url)  {
-        homePage.go(url);
-    }
-
-    @When("the site is open enter city name {string} into the field From")
-    public void the_site_is_open_enter_city_name_into_the_field_from(String cityFrom) {
-        homePage.enterCityFrom(cityFrom);
-    }
-
-    @Then("enter city name {string} into the field To")
-    public void enter_city_name_into_the_field_to(String cityTo) {
-        homePage.enterCityTo(cityTo);
-    }
-
-    @Then("enter date {string} into the field Depart")
-    public void enter_date_into_the_field_depart(String depart) {
-        homePage.enterDate(depart);
-    }
-
-    @And("click the button Search")
-    public void click_the_button_search() {
-        homePage.search();
-    }
-
-    @Then("assert that there is a list of results")
-    public void assert_that_there_is_a_list_of_results() {
-        resultsPage.assertThatThereIsAListOfResults();
-    }
-
-
-    @When("the site is open click the button Search")
-    public void the_site_is_open_click_the_button_search() {
-        homePage.search();
-    }
-
-    @Then("assert that user got the message {string}")
-    public void assert_that_user_got_the_message(String errorMessage) {
-        homePage.assertThatUserGotTheMessage(errorMessage);
-    }*/
 }

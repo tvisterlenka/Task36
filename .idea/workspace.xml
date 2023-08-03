@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="Второй коммит. Что успела к 12">
+    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="Третий коммит. Что успела к 13:00">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/RunCucumberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +65,15 @@
       <recent name="C:\Users\tvist\IdeaProjects\Task36\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: sf">
-    <configuration name="Feature: sf" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: detailedQAJAprogram">
+    <configuration name="Feature: application" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/sf.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/application.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: sf" />
+      <option name="SUGGESTED_NAME" value="Feature: application" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -78,14 +85,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: skillfactory" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: benefits" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: skillfactory" />
+      <option name="SUGGESTED_NAME" value="Feature: benefits" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -97,15 +104,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: enter correct data without promo code (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: detailedQAJAprogram" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
-      <option name="NAME_FILTER" value="^enter correct data without promo code$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^enter correct data without promo code$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: enter correct data without promo code" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: detailedQAJAprogram" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -117,15 +123,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: enter correct data without promo code" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: shopiland" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/example.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
-      <option name="NAME_FILTER" value="^enter correct data without promo code$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^enter correct data without promo code$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: enter correct data without promo code" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: shopiland" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -137,15 +142,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: enter correct data" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: choose tariff Consult" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/selectingTariff.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task35" />
-      <option name="NAME_FILTER" value="^enter correct data$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^enter correct data$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: enter correct data" />
+      <option name="NAME_FILTER" value="^choose tariff Consult$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^choose tariff Consult$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: choose tariff Consult" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -159,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: sf" />
-        <item itemvalue="Cucumber Java.Feature: skillfactory" />
-        <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code (1)" />
-        <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code" />
-        <item itemvalue="Cucumber Java.Scenario: enter correct data" />
+        <item itemvalue="Cucumber Java.Feature: detailedQAJAprogram" />
+        <item itemvalue="Cucumber Java.Feature: application" />
+        <item itemvalue="Cucumber Java.Feature: benefits" />
+        <item itemvalue="Cucumber Java.Feature: shopiland" />
+        <item itemvalue="Cucumber Java.Scenario: choose tariff Consult" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691053283535</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Третий коммит. Что успела к 13:00">
+      <created>1691056707469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691056707469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит. На всякий случай, а то вдруг всё-таки вырублюсь. Готовы пока только 11 тестов." />
     <MESSAGE value="Второй коммит. Что успела к 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="Второй коммит. Что успела к 12" />
+    <MESSAGE value="Третий коммит. Что успела к 13:00" />
+    <option name="LAST_COMMIT_MESSAGE" value="Третий коммит. Что успела к 13:00" />
   </component>
 </project>

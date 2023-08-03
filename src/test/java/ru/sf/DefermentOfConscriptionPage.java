@@ -13,6 +13,5 @@ public class DefermentOfConscriptionPage {
     public void assertThatPageOpened(String url) {
         String currentUrl = webDriver.getCurrentUrl();
         assertEquals(url, currentUrl);
-        webDriver.close();
     }
 }
