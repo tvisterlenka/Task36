@@ -38,7 +38,7 @@ Feature: Registering for a QAJA course
     And set phone number '000000000'
     Then assert that the phone number is correct
 #4
-  Scenario: close registration form
+  Scenario: close application form
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open click the button Записаться на курс
     Then close the application form
@@ -105,22 +105,12 @@ Feature: Getting information about benefits for IT specialists
   Scenario: get information about deferment of conscription
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open click the link Отсрочка от призыва до 27 лет
-    Then assert that user sees page "http://www.kremlin.ru/acts/bank/47593"
+    Then assert that page "http://www.kremlin.ru/acts/bank/47593" opened
 #14
   Scenario: get information about deferment of military service during partial mobilisation
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open click the link Отсрочка от частичной мобилизации
-    Then assert that user sees page "https://blog.skillfactory.ru/pravda-li-chto-ajtishnikam-polozhena-otsrochka/?_ga=2.55549931.1353646327.1690927797-486266383.1670519486"
-
-Feature: Looking through QAJA course program
-  #Positive scenarios
-#15
-  Scenario: unfold all the QAJA course program sections
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then unfold all the QAJA course program sections
-    Then assert that all the sections are unfolded
+    Then assert that page "https://blog.skillfactory.ru/pravda-li-chto-ajtishnikam-polozhena-otsrochka/?_ga=2.55549931.1353646327.1690927797-486266383.1670519486" is opened
 
 Feature: Following the link to the website for testing during internship
   #Positive scenarios
@@ -130,7 +120,7 @@ Feature: Following the link to the website for testing during internship
     When the site is open click the tag Тестирование
     Then click Тестировщик на Java
     Then click the link Shopiland
-    Then assert that user sees page "https://shopiland.ru/"
+    Then assert that user gets page "https://shopiland.ru/"
 
 Feature: Getting QAJA course detailed program
   #Positive scenarios
@@ -139,99 +129,77 @@ Feature: Getting QAJA course detailed program
     Given url of SkillFactory: 'https://skillfactory.ru/'
     When the site is open click the tag Тестирование
     Then click Тестировщик на Java
-#    Then enter name 'Светлана'
-#    And enter email 'qajatest6@gmail.com'
-#    And enter phone number '9100000000'
+#    Then set name 'Светлана'
+#    And set email 'qajatest6@gmail.com'
+#    And set phone number '9100000000'
     Then enter name 'Марина'
     And enter email 'qajatest@gmail.com'
     And enter phone number '9000000000'
     Then click the button Получить программу
-    Then assert that user got "Подробная программа курса"
+    Then assert that user got page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
 #18
   Scenario: enter correct data with promo code
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-#    Then enter name 'Светлана'
-#    And enter email 'qajatest6@gmail.com'
-#    And enter phone number '9100000000'
-    Then enter name 'Марина'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter name 'Марина'
+#    Then set name 'Светлана'
+#    And set email 'qajatest6@gmail.com'
+#    And set phone number '9100000000'
     And enter email 'qajatest@gmail.com'
     And enter phone number '9000000000'
-    And enter promo code
+    And enter promo code 'Test'
     Then click the button Получить программу
-    Then assert that user got "Подробная программа курса"
+    Then assert that user got page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
 #19
   Scenario: select another phone code
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open select kyrgyz phone code
 #    Then enter name 'Светлана'
 #    And enter email 'qajatest6@gmail.com'
 #    And enter phone number '9100000000'
-    Then select kyrgyz phone code
     And enter phone number '000000000'
-#20
-  Scenario: close registration form
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then assert that user got "Подробная программа курса"
+    Then assert that this phone number is correct
 
   # Negative scenarios
 #21
   Scenario: enter no data
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open click the button Получить программу
+    Then assert that user sees notification
 #22
   Scenario: enter incorrect name
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter name 'Марина1'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter name "Марина1"
     Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Then assert that user sees set name notification "Укажите, пожалуйста, имя"
 #23
   Scenario: enter incorrect email
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter email 'test@gmail.com.'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter email 'test@gmail.com.'
     Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Then assert that user sees incorrect email notification "Укажите, пожалуйста, корректный email"
 #24
   Scenario: enter incorrect phone number
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter phone number '0000000000'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter phone number '0000000000'
     Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Then assert that user sees incorrect phone number notification "Укажите, пожалуйста, корректный номер телефона"
 #25
   Scenario: enter too short phone number
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter phone number 900000000'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter phone number '900000000'
     Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Then assert that user sees too short phone number notification "Слишком короткое значение"
 #26
   Scenario: enter too long phone number
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter phone number '90000000000'
-    Then assert that user sees "Подробная программа курса"
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter phone number '9876543210123'
+    Then assert that length of this phone number is correct
 #27
   Scenario: untick the agreement checkbox
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then untick the agreement box
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open untick the agreement box
     Then click the button Получить программу
-    Then assert that user sees "Подробная программа курса"
+    Then assert that user sees error notification
 
 Feature: Selecting tariff
   #Positive scenarios
@@ -240,19 +208,15 @@ Feature: Selecting tariff
     Given url of SkillFactory: 'https://skillfactory.ru/'
     When the site is open click the tag Тестирование
     Then click Тестировщик на Java
-    Then click the button Получить программу
-    Then assert that user sees page ""
+    Then click the button Выбрать тариф Базовый
+    Then assert that user sees page1 "Записаться на курс по базовому тарифу"
 #29
   Scenario: choose tariff Consult
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then click the button Получить программу
-    Then assert that user sees page ""
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open click the button Выбрать тариф Оптимальный
+    Then assert that user sees page2 "Записаться на курс по расширенному тарифу"
 #30
   Scenario: choose tariff Full
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then click the button Получить программу
-    Then assert that user sees page ""
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open click the button Выбрать тариф VIP
+    Then assert that user sees page3 "Записаться на курс по индивидуальному тарифу"

@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ProgramPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ReCaptchaPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ShopilandPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/TestingCoursesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" afterDir="false" />
+    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="Второй коммит. Что успела к 12">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfConscriptionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/DefermentOfMilitaryServiceDuringMobilisationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/ShopilandPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ShopilandPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/example.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/example.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +181,30 @@
       <option name="presentableId" value="Default" />
       <updated>1690575958876</updated>
     </task>
+    <task id="LOCAL-00001" summary="Первый коммит. На всякий случай, а то вдруг всё-таки вырублюсь. Готовы пока только 11 тестов.">
+      <created>1691038647050</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691038647050</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Первый коммит. На всякий случай, а то вдруг всё-таки вырублюсь. Готовы пока только 11 тестов." />
+    <MESSAGE value="Второй коммит. Что успела к 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Второй коммит. Что успела к 12" />
   </component>
 </project>

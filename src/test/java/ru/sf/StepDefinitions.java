@@ -7,16 +7,8 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
-import java.awt.Point;
 import java.time.Duration;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -26,11 +18,11 @@ public class StepDefinitions {
     public static final HomePage homePage;
     public static final TestingCoursesPage testingCoursesPage;
     public static final QajaCoursePage qajaCoursePage;
-    /*public static final ResultsPage resultsPage;
-    public static final ResultsPage resultsPage;
-    public static final ResultsPage resultsPage;
-    public static final ResultsPage resultsPage;*/
     public static final ProgramPage programPage;
+    public static final PreferentialMortgagePage preferentialMortgagePage;
+    public static final DefermentOfConscriptionPage defermentOfConscriptionPage;
+    public static final DefermentOfMilitaryServiceDuringMobilisationPage defermentOfMilitaryServiceDuringMobilisationPage;
+    public static final ShopilandPage shopinlandPage;
 
     static {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
@@ -42,6 +34,10 @@ public class StepDefinitions {
         testingCoursesPage = new TestingCoursesPage(webDriver);
         qajaCoursePage = new QajaCoursePage(webDriver);
         programPage = new ProgramPage(webDriver);
+        preferentialMortgagePage = new PreferentialMortgagePage(webDriver);
+        defermentOfConscriptionPage = new DefermentOfConscriptionPage(webDriver);
+        defermentOfMilitaryServiceDuringMobilisationPage = new DefermentOfMilitaryServiceDuringMobilisationPage(webDriver);
+        shopinlandPage = new ShopilandPage(webDriver);
     }
 
     @Given("url of SkillFactory: {string}")
@@ -229,29 +225,163 @@ public class StepDefinitions {
         qajaCoursePage.assertUserGotErrorNotification();
     }
 
-    @Then("click the link Ипотека со ставкой {int}%")
-    public void clickTheLinkИпотекаСоСтавкой(int arg0) {
-
+    @Then("click the link Ипотека со ставкой 5%")
+    public void clickTheLinkИпотекаСоСтавкой() {
+        qajaCoursePage.clickTheLinkИпотекаСоСтавкой();
     }
 
     @Then("assert that user sees page {string}")
-    public void assertThatUserSeesPage(String arg0) {
-
+    public void assertThatUserSeesPage(String url) {
+        preferentialMortgagePage.assertThatUserSeesPage(url);
     }
 
-    @When("the site is open click the link Отсрочка от призыва до {int} лет")
-    public void theSiteIsOpenClickTheLinkОтсрочкаОтПризываДоЛет(int arg0) {
+    @When("the site is open click the link Отсрочка от призыва до 27 лет")
+    public void theSiteIsOpenClickTheLinkОтсрочкаОтПризываДо27Лет() {
+        qajaCoursePage.clickTheLinkОтсрочкаОтПризываДо27Лет();
+    }
 
+    @Then("assert that page {string} opened")
+    public void assertThatPageOpened(String url) {
+        defermentOfConscriptionPage.assertThatPageOpened(url);
     }
 
     @When("the site is open click the link Отсрочка от частичной мобилизации")
     public void theSiteIsOpenClickTheLinkОтсрочкаОтЧастичнойМобилизации() {
+        qajaCoursePage.clickTheLinkОтсрочкаОтЧастичнойМобилизации();
+    }
 
+    @Then("assert that page {string} is opened")
+    public void assertThatPageIsOpened(String url) {
+        defermentOfMilitaryServiceDuringMobilisationPage.assertThatPageIsOpened(url);
     }
 
     @Then("click the link Shopiland")
     public void clickTheLinkShopiland() {
+        qajaCoursePage.clickTheLinkShopiland();
     }
+
+    @Then("assert that user gets page {string}")
+    public void assertThatUserGetsPage(String url) {
+        shopinlandPage.assertThatUserGetsPage(url);
+    }
+
+    @Then("enter name {string}")
+    @When("the site is open enter name {string}")
+    public void enterName(String name) {
+        qajaCoursePage.enterName(name);
+    }
+
+    @And("enter email {string}")
+    public void enterEmail(String email) {
+        qajaCoursePage.enterEmail(email);
+    }
+
+    @And("enter phone number {string}")
+    public void enterPhoneNumber(String number) {
+        qajaCoursePage.enterPhoneNumber(number);
+    }
+
+    /*@And("enter promo code")
+    public void enterPromoCode(String promoCode) {
+        qajaCoursePage.enterPromoCode(promoCode);
+    }
+
+    @Then("assert that user sees {string}")
+    public void assertThatUserSees(String arg0) {
+    }*/
+
+    @And("enter promo code {string}")
+    public void enterPromoCodeTest(String promoCode) {
+        qajaCoursePage.enterPromoCode(promoCode);
+    }
+
+    @When("the site is open select kyrgyz phone code")
+    public void SelectKyrgyzPhoneCode() {
+        qajaCoursePage.selectAnotherPhoneCode();
+    }
+
+    @Then("assert that this phone number is correct")
+    public void assertThatThisPhoneNumberIsCorrect() {
+        qajaCoursePage.assertThatThisPhoneNumberIsCorrect();
+    }
+
+    @When("the site is open click the button Получить программу")
+    public void ClickTheButtonПолучитьПрограмму() {
+        qajaCoursePage.ClickTheButtonПолучитьПрограмму();
+    }
+
+    @Then("assert that user sees notification")
+    public void assertThatUserSeesNotification(String notification) {
+        qajaCoursePage.assertThatUserSeesNotification(notification);
+    }
+
+    @Then("assert that user sees set name notification {string}")
+    public void assertThatUserSeesSetNameNotification(String notification) {
+        qajaCoursePage.assertUserSeesSetNameNotification(notification);
+    }
+
+    @When("the site is open enter email {string}")
+    public void theSiteIsOpenEnterEmailTestGmailCom() {
+        qajaCoursePage
+    }
+
+    @Then("assert that user sees incorrect email notification {string}")
+    public void assertThatUserSeesIncorrectEmailNotification(String incorrectEmailNotification) {
+        qajaCoursePage.assertUserSeesIncorrectEmailNotification(incorrectEmailNotification)
+    }
+
+    @Then("assert that user sees incorrect phone number notification {string}")
+    public void assertThatUserSeesIncorrectPhoneNumberNotification(String arg0) {
+    }
+
+    @Then("assert that user sees too short phone number notification {string}")
+    public void assertThatUserSeesTooShortPhoneNumberNotification(String arg0) {
+    }
+
+    @Then("assert that length of this phone number is correct")
+    public void assertThatLengthOfThisPhoneNumberIsCorrect() {
+    }
+
+    @When("the site is open untick the agreement box")
+    public void theSiteIsOpenUntickTheAgreementBox() {
+    }
+
+    @Then("assert that user sees error notification")
+    public void assertThatUserSeesErrorNotification() {
+    }
+
+    @Then("click the button Выбрать тариф Базовый")
+    public void clickTheButtonВыбратьТарифБазовый() {
+    }
+
+    @Then("assert that user sees page1 {string}")
+    public void assertThatUserSeesPage1(String url) {
+    }
+
+    @When("the site is open click the button Выбрать тариф Оптимальный")
+    public void theSiteIsOpenClickTheButtonВыбратьТарифОптимальный() {
+    }
+
+    @Then("assert that user sees page2 {string}")
+    public void assertThatUserSeesPage2(String url) {
+    }
+
+    @When("the site is open click the button Выбрать тариф VIP")
+    public void theSiteIsOpenClickTheButtonВыбратьТарифVIP() {
+    }
+
+    @Then("assert that user sees page3 {string}")
+    public void assertThatUserSeesPage3(String url) {
+    }
+
+    @When("the site is open enter phone number {string}")
+    public void theSiteIsOpenEnterPhoneNumber(String number) {
+        qajaCoursePage.enterPhoneNumber(number);
+    }
+
+
+
+
 
 
 
