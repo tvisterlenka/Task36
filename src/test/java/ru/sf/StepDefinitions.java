@@ -68,13 +68,7 @@ public class StepDefinitions {
     public void set_phone_number(String number) {
         qajaCoursePage.setPhoneNumber(number);
     }
-    @Then("assert that user got {string}")
-    public void assert_that_user_got(String detailedCourseProgram) {
-//        final String actualString = webDriver.findElement(By.cssSelector("#rec600706268 > div > div > div.t396__elem.tn-elem.tn-elem__6007062681677770138193 > div")).getText();
-//        assertEquals(detailedCourseProgram, actualString);
-        programPage.assertThatUserGotDetailedProgram(detailedCourseProgram);
-        webDriver.close();
-    }
+
 
     @Given("url of QAJA course page: {string}")
     public void urlOfQAJACoursePageHttpsSkillfactoryRuJavaQaEngineerTestirovshikPo(String url) {
@@ -103,7 +97,7 @@ public class StepDefinitions {
 
     @Then("assert that user got page {string}")
     public void assertThatUserGotPage(String url) {
-        qajaCoursePage.assertUrlEqualsExpected(url);
+        programPage.assertUrlEqualsExpected(url);
     }
 
     @Then("close the application form")
@@ -233,8 +227,8 @@ public class StepDefinitions {
     }
 
     @When("the site is open click the button Получить программу")
-    public void ClickTheButtonПолучитьПрограмму() {
-        qajaCoursePage.ClickTheButtonПолучитьПрограмму();
+    public void clickTheButtonПолучитьПрограмму() {
+        qajaCoursePage.clickTheButtonПолучитьПрограмму();
     }
 
     @Then("assert that user sees notification")
@@ -285,5 +279,10 @@ public class StepDefinitions {
     @When("the site is open enter phone number {string}")
     public void theSiteIsOpenEnterPhoneNumber(String number) {
         qajaCoursePage.enterPhoneNumber(number);
+    }
+
+    @Then("click button Получить программу")
+    public void clickButtonПолучитьПрограмму() {
+        qajaCoursePage.clickTheButtonПолучитьПрограмму();
     }
 }

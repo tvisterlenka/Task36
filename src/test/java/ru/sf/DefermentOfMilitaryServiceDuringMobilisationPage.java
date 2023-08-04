@@ -11,7 +11,7 @@ public class DefermentOfMilitaryServiceDuringMobilisationPage {
     }
 
     public void assertThatPageIsOpened(String url) {
-        String currentUrl = webDriver.getCurrentUrl().substring(0, 30);
+        final String currentUrl = webDriver.getCurrentUrl().substring(0, 30);
         assertEquals(url.substring(0, 30), currentUrl);
     }
 }

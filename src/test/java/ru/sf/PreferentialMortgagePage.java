@@ -11,7 +11,7 @@ public class PreferentialMortgagePage {
     }
 
     public void assertThatUserSeesPage(String url) {
-        String currentUrl = webDriver.getCurrentUrl().substring(0, 20);
+        final String currentUrl = webDriver.getCurrentUrl().substring(0, 20);
         assertEquals(url.substring(0, 20), currentUrl);
     }
 
