@@ -4,15 +4,14 @@ import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ShopilandPage {
-
+public class SuccessStoriesPage {
     private final WebDriver webDriver;
-    public ShopilandPage(WebDriver webDriver) {
+    public SuccessStoriesPage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
 
-    public void assertThatUserGetsPage(String url) {
-        String currentUrl = webDriver.getCurrentUrl();
+    public void assertThatUserSeesBlogPage(String url) {
+        final String currentUrl = webDriver.getCurrentUrl().substring(0, 42);
         assertEquals(url, currentUrl);
     }
 }

@@ -1,4 +1,4 @@
-Feature: Getting QAJA course detailed program
+Feature: Get QAJA course detailed program
   #Positive scenarios
   Scenario: enter correct data without promo code
     Given url of SkillFactory: 'https://skillfactory.ru/'
@@ -8,7 +8,7 @@ Feature: Getting QAJA course detailed program
     And enter email 'qajatest@gmail.com'
     And enter phone number '9000000000'
     Then click the button Получить программу
-#    Then assert that user got page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
+    Then assert that user goes to page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
   Scenario: enter correct data with promo code
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open enter name 'Марина'
@@ -16,12 +16,11 @@ Feature: Getting QAJA course detailed program
     And enter phone number '9000000000'
     And enter promo code 'Test'
     Then click the button Получить программу
-#    Then assert that user got page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
+    Then assert that user goes to page "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou"
   Scenario: select another phone code
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open select kyrgyz phone code
-    And enter phone number '000000000'
-    Then assert that this phone number is correct
+    Then assert that this phone code is correct
 
   # Negative scenarios
   Scenario: enter no data
@@ -52,6 +51,10 @@ Feature: Getting QAJA course detailed program
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open enter phone number '9876543210123'
     Then assert that length of this phone number is correct
+  Scenario: enter letters into phone number box
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter 'letters' into phone number box
+    Then assert that length of this phone number is 0
   Scenario: untick the agreement checkbox
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open untick the agreement box
