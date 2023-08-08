@@ -17,7 +17,6 @@ public class TestingCoursesPage {
             if (!parentHandle.equals(handle))
                 webDriver.switchTo().window(handle);
             String currentUrl = webDriver.getCurrentUrl();
-            System.out.println("URL of child window is " + currentUrl);
         }
     }
 

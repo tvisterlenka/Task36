@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePage {
 
-    private static final String TESTING = "#rec610368727 > div > div > div.t396__elem.tn-elem.tn-elem__6103687271679405234205.js-sbs-anim-trigger_hover > a";
+    private static final String TESTING = "#rec623700412 > div > div > div > section > div.outer-wrapper > div > div.columns > div:nth-child(1) > div > ul > li:nth-child(4) > a";
 
     private final WebDriver webDriver;
     public HomePage(WebDriver webDriver) {
@@ -20,5 +20,11 @@ public class HomePage {
 
     public void clickTesting() {
         webDriver.findElement(By.cssSelector(TESTING)).click();
+        String parentHandle = webDriver.getWindowHandle();
+        for (String handle: webDriver.getWindowHandles()) {
+            if (!parentHandle.equals(handle))
+                webDriver.switchTo().window(handle);
+            String currentUrl = webDriver.getCurrentUrl();
+        }
     }
 }
