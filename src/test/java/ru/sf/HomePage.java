@@ -3,8 +3,6 @@ package ru.sf;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class HomePage {
 
     private static final String TESTING = "#rec623700412 > div > div > div > section > div.outer-wrapper > div > div.columns > div:nth-child(1) > div > ul > li:nth-child(4) > a";
@@ -24,7 +22,6 @@ public class HomePage {
         for (String handle: webDriver.getWindowHandles()) {
             if (!parentHandle.equals(handle))
                 webDriver.switchTo().window(handle);
-            String currentUrl = webDriver.getCurrentUrl();
         }
     }
 }

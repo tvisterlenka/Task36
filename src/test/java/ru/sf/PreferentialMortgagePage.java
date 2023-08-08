@@ -14,6 +14,4 @@ public class PreferentialMortgagePage {
         final String currentUrl = webDriver.getCurrentUrl().substring(0, 20);
         assertEquals(url.substring(0, 20), currentUrl);
     }
-
-
 }

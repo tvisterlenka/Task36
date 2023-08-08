@@ -10,8 +10,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class StepDefinitions {
 
     static final WebDriver webDriver;
@@ -22,7 +20,7 @@ public class StepDefinitions {
     public static final PreferentialMortgagePage preferentialMortgagePage;
     public static final DefermentOfConscriptionPage defermentOfConscriptionPage;
     public static final DefermentOfMilitaryServiceDuringMobilisationPage defermentOfMilitaryServiceDuringMobilisationPage;
-    public static final ShopilandPage shopinlandPage;
+    public static final ShopilandPage shopilandPage;
     public static final PromotionRulesPage promotionRulesPage;
     public static final SuccessStoriesPage successStoriesPage;
 
@@ -39,7 +37,7 @@ public class StepDefinitions {
         preferentialMortgagePage = new PreferentialMortgagePage(webDriver);
         defermentOfConscriptionPage = new DefermentOfConscriptionPage(webDriver);
         defermentOfMilitaryServiceDuringMobilisationPage = new DefermentOfMilitaryServiceDuringMobilisationPage(webDriver);
-        shopinlandPage = new ShopilandPage(webDriver);
+        shopilandPage = new ShopilandPage(webDriver);
         promotionRulesPage = new PromotionRulesPage(webDriver);
         successStoriesPage = new SuccessStoriesPage(webDriver);
     }
@@ -100,16 +98,14 @@ public class StepDefinitions {
 
     @Then("assert that user goes to page {string}")
     public void assertThatUserGoesToPage(String url) {
-        qajaCoursePage.assertUrlEqualsExpected(url);
-//      Заменить на
-//        programPage.assertUrlEqualsExpected(url);
-//      если нет капчи.
-        /*if (actualState.equals(EXPECTED_STATE_NONE)) {
-            assertEquals(EXPECTED_STATE_NONE, actualState);
+        final String actualURL = webDriver.getCurrentUrl();
+        if (url.equals(actualURL)) {
+            programPage.assertUrlEqualsExpected(url);
         }
+//        Если выскакивает капча "Please check the box to let us know you're human"
         else {
-            assertEquals(EXPECTED_STATE_BLOCK, actualState);
-        }*/
+            qajaCoursePage.assertUrlEqualsExpected(url);
+        }
     }
 
     @Then("close the application form")
@@ -229,7 +225,7 @@ public class StepDefinitions {
 
     @Then("assert that user gets page {string}")
     public void assertThatUserGetsPage(String url) {
-        shopinlandPage.assertThatUserGetsPage(url);
+        shopilandPage.assertThatUserGetsPage(url);
     }
 
     @Then("enter name {string}")
@@ -343,29 +339,4 @@ public class StepDefinitions {
         successStoriesPage.assertThatUserSeesBlogPage(url);
     }
 
-        /*@When("the site is open click the button Выбрать тариф Базовый")
-    public void theSiteIsOpenClickTheButtonВыбратьТарифБазовый() {
-        qajaCoursePage.theSiteIsOpenClickTheButtonВыбратьТарифБазовый();
-    }
-
-    @Then("assert that user sees the form 1 {string}")
-    public void assertThatUserSeesTheForm1(String basic) {
-        qajaCoursePage.assertThatUserSeesTheForm1(basic);
-    }
-
-    @When("the site is open click the button Выбрать тариф Оптимальный")
-    public void theSiteIsOpenClickTheButtonВыбратьТарифОптимальный() {
-    }
-
-    @Then("assert that user sees the form 2 {string}")
-    public void assertThatUserSeesTheForm2(String consult) {
-    }
-
-    @When("the site is open click the button Выбрать тариф VIP")
-    public void theSiteIsOpenClickTheButtonВыбратьТарифVIP() {
-    }
-
-    @Then("assert that user sees the form 3 {string}")
-    public void assertThatUserSeesTheForm3(String full) {
-    }*/
 }

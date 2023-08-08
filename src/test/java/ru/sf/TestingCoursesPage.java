@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TestingCoursesPage {
-
     private static final String QAJA = "#rec560876661 > div > div > div.t396__elem.tn-elem.tn-elem__5608766611679951555532 > a";
     private final WebDriver webDriver;
     public TestingCoursesPage(WebDriver webDriver) {
@@ -16,8 +15,6 @@ public class TestingCoursesPage {
         for (String handle: webDriver.getWindowHandles()) {
             if (!parentHandle.equals(handle))
                 webDriver.switchTo().window(handle);
-            String currentUrl = webDriver.getCurrentUrl();
         }
     }
-
 }
