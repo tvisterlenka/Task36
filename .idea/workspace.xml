@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="29 clean tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PersonalDataProtectionRegulationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/PersonalDataProtectionRegulation.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/qajaCourse.feature" afterDir="false" />
+    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="32 tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +232,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691535467598</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="32 tests">
+      <created>1691548283063</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691548283063</updated>
+    </task>
+    <task id="LOCAL-00010" summary="32 tests">
+      <created>1691548448854</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691548448854</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,6 +301,7 @@
     <MESSAGE value="29 tests" />
     <MESSAGE value="29 tests 08.08.2023" />
     <MESSAGE value="29 clean tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="29 clean tests" />
+    <MESSAGE value="32 tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="32 tests" />
   </component>
 </project>
