@@ -19,3 +19,8 @@
 
 
 Для запуска тестов нужно ввести команду mvn test.
+
+
+На всякий случай вот ссылка на скринкаст моего прогона тестов этого проекта: https://www.awesomescreenshot.com/video/19791531?key=e45923bd2113399f4dbce9b005a504e5 
+
+или вот: https://drive.google.com/file/d/16E3KM147eWMue0SItXl4vHWuQI41t3iq/view?usp=sharing
