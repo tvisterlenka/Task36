@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class QajaCoursePage {
 
+    private static final String QAJA_COURSE_PAGE_URL = "https://skillfactory.ru/java-qa-engineer-testirovshik-po";
     private static final String APPLY_FOR_COURSE_BUTTON = "#rec359656457 > div > div > div.t396__elem.tn-elem.tn-elem__3596564571596261549401 > a";
     private static final String NAME_INPUT_BOX = "input_1495810359387";
     private static final String EMAIL_INPUT_BOX = "input_1495810354468";
@@ -62,6 +63,8 @@ public class QajaCoursePage {
     private static final String GET_PROGRAM_BUTTON = "#form358086231 > div.t-form__inputsbox > div.tn-form__submit > button";
     private static final String SUCCESS_URL = "/html/body/div[2]/div[32]/div/div/div[4]/div[1]/form";
     private static final String DATA_SUCCESS_URL = "data-success-url";
+    private static final String PERSONAL_DATA_PROTECTION_REGULATION_URL_FORM = "#form581372890 > div.t-form__inputsbox > div.t-input-group.t-input-group_cb > div > label > div:nth-child(3) > a";
+    private static final String PERSONAL_DATA_PROTECTION_REGULATION_URL = "#form358086231 > div.t-form__inputsbox > div.t-input-group.t-input-group_cb > div > label > span > a";
     private static final String PROMOTION_RULES_URL = "#rec522286097 > div > div > div.t396__elem.tn-elem.tn-elem__5222860971670230587922 > div > a";
     private static final String SUCCESS_STORIES_URL = "#rec493408831 > div > div > div.t396__elem.tn-elem.tn-elem__4934088311665392810483 > a";
     private static final String QAJA_FULL_PROGRAM_URL = "https://skillfactory.ru/java-qa-engineer-syllabus-thankyou";
@@ -74,6 +77,11 @@ public class QajaCoursePage {
 
     public void go(String url) {
         webDriver.get(url);
+    }
+
+    public void assertThatUserGotQAJACoursePage() {
+        String currentUrl = webDriver.getCurrentUrl();
+        assertEquals(QAJA_COURSE_PAGE_URL, currentUrl);
     }
 
     public void applyForCourse() {
@@ -118,6 +126,19 @@ public class QajaCoursePage {
         while (iterator.hasNext()) {
             String ChildWindow = iterator.next();
             if (QAJA_FULL_PROGRAM_URL.equalsIgnoreCase(ChildWindow)) {
+                webDriver.switchTo().window(ChildWindow);
+            }
+        }
+    }
+
+    public void clickTheRegulationLink() {
+        webDriver.findElement(By.cssSelector(PERSONAL_DATA_PROTECTION_REGULATION_URL_FORM)).click();
+        String mainWindowHandle = webDriver.getWindowHandle();
+        Set<String> allWindowHandles = webDriver.getWindowHandles();
+        Iterator<String> iterator = allWindowHandles.iterator();
+        while (iterator.hasNext()) {
+            String ChildWindow = iterator.next();
+            if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
                 webDriver.switchTo().window(ChildWindow);
             }
         }
@@ -328,6 +349,19 @@ public class QajaCoursePage {
     public void assertUserSeesErrorNotification() {
         final String actualErrorNotification = webDriver.findElement(By.xpath(ERROR_NOTIFICATION_BOX)).getText();
         assertEquals(EXPECTED_NOTIFICATION, actualErrorNotification);
+    }
+
+    public void clickTheLinkОбработкуПерсональныхДанных() {
+        webDriver.findElement(By.cssSelector(PERSONAL_DATA_PROTECTION_REGULATION_URL)).click();
+        String mainWindowHandle = webDriver.getWindowHandle();
+        Set<String> allWindowHandles = webDriver.getWindowHandles();
+        Iterator<String> iterator = allWindowHandles.iterator();
+        while (iterator.hasNext()) {
+            String ChildWindow = iterator.next();
+            if (!mainWindowHandle.equalsIgnoreCase(ChildWindow)) {
+                webDriver.switchTo().window(ChildWindow);
+            }
+        }
     }
 
     public void theSiteIsOpenClickTheLinkПравилахАкции(String url) {

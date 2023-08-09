@@ -1,10 +1,8 @@
 Feature: Apply for a QAJA course
   #Positive scenarios
   Scenario: enter correct data without promo code
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then click the button Записаться на курс
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open click the button Записаться на курс
     Then set name 'Марина'
     And set email 'qajatest@gmail.com'
     And set phone number '9000000000'
@@ -24,6 +22,11 @@ Feature: Apply for a QAJA course
     When the site is open click the button Записаться на курс
     Then select kyrgyz phone code
     Then assert that the phone code is correct
+  Scenario: get the personal data protection regulation
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open click the button Записаться на курс
+    Then click the personal data protection regulation link
+    Then assert that user goes to the regulation page "https://skillfactory.ru/position_of_user_personal_data"
   Scenario: close application form
     Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
     When the site is open click the button Записаться на курс

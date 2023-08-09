@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="29 tests 08.08.2023">
+    <list default="true" id="6fc819e5-93eb-47e1-8fdc-817624f7403d" name="Changes" comment="29 clean tests">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PersonalDataProtectionRegulationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/PersonalDataProtectionRegulation.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/qajaCourse.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/PreferentialMortgagePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/ProgramPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/ProgramPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/QajaCoursePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/sf/TestingCoursesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/sf/TestingCoursesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/benefits.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/detailedQAJAprogram.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/ru/sf/skillfactory.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -61,15 +69,15 @@
       <recent name="C:\Users\tvist\IdeaProjects\Task36\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: applicationForm">
-    <configuration name="Feature: applicationForm" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: PersonalDataProtectionRegulation">
+    <configuration name="Feature: PersonalDataProtectionRegulation" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/PersonalDataProtectionRegulation.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task36" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: applicationForm" />
+      <option name="SUGGESTED_NAME" value="Feature: PersonalDataProtectionRegulation" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -100,14 +108,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: shopiland" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: qajaCourse" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/qajaCourse.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task36" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: shopiland" />
+      <option name="SUGGESTED_NAME" value="Feature: qajaCourse" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -119,15 +127,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: enter correct data with promo code" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: shopiland" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/applicationForm.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/ru/sf/shopiland.feature" />
       <option name="GLUE" value="ru.sf" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Task36" />
-      <option name="NAME_FILTER" value="^enter correct data with promo code$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^enter correct data with promo code$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: enter correct data with promo code" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: shopiland" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -161,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: applicationForm" />
-        <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code" />
+        <item itemvalue="Cucumber Java.Feature: PersonalDataProtectionRegulation" />
         <item itemvalue="Cucumber Java.Feature: detailedQAJAprogram" />
-        <item itemvalue="Cucumber Java.Scenario: enter correct data with promo code" />
         <item itemvalue="Cucumber Java.Feature: shopiland" />
+        <item itemvalue="Cucumber Java.Feature: qajaCourse" />
+        <item itemvalue="Cucumber Java.Scenario: enter correct data without promo code" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691529142408</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="29 clean tests">
+      <created>1691535467598</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691535467598</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +249,39 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -249,6 +295,7 @@
     <MESSAGE value="5 коммит" />
     <MESSAGE value="29 tests" />
     <MESSAGE value="29 tests 08.08.2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="29 tests 08.08.2023" />
+    <MESSAGE value="29 clean tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="29 clean tests" />
   </component>
 </project>

@@ -1,10 +1,8 @@
 Feature: Get QAJA course detailed program
   #Positive scenarios
   Scenario: enter correct data without promo code
-    Given url of SkillFactory: 'https://skillfactory.ru/'
-    When the site is open click the tag Тестирование
-    Then click Тестировщик на Java
-    Then enter name 'Марина'
+    Given url of QAJA course page: 'https://skillfactory.ru/java-qa-engineer-testirovshik-po'
+    When the site is open enter name 'Марина'
     And enter email 'qajatest@gmail.com'
     And enter phone number '9000000000'
     Then click the button Получить программу

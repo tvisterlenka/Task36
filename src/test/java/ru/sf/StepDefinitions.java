@@ -11,8 +11,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class StepDefinitions {
-
     static final WebDriver webDriver;
+
     public static final HomePage homePage;
     public static final TestingCoursesPage testingCoursesPage;
     public static final QajaCoursePage qajaCoursePage;
@@ -20,6 +20,7 @@ public class StepDefinitions {
     public static final PreferentialMortgagePage preferentialMortgagePage;
     public static final DefermentOfConscriptionPage defermentOfConscriptionPage;
     public static final DefermentOfMilitaryServiceDuringMobilisationPage defermentOfMilitaryServiceDuringMobilisationPage;
+    public static final PersonalDataProtectionRegulationPage personalDataProtectionRegulationPage;
     public static final ShopilandPage shopilandPage;
     public static final PromotionRulesPage promotionRulesPage;
     public static final SuccessStoriesPage successStoriesPage;
@@ -37,6 +38,7 @@ public class StepDefinitions {
         preferentialMortgagePage = new PreferentialMortgagePage(webDriver);
         defermentOfConscriptionPage = new DefermentOfConscriptionPage(webDriver);
         defermentOfMilitaryServiceDuringMobilisationPage = new DefermentOfMilitaryServiceDuringMobilisationPage(webDriver);
+        personalDataProtectionRegulationPage = new PersonalDataProtectionRegulationPage(webDriver);
         shopilandPage = new ShopilandPage(webDriver);
         promotionRulesPage = new PromotionRulesPage(webDriver);
         successStoriesPage = new SuccessStoriesPage(webDriver);
@@ -54,9 +56,9 @@ public class StepDefinitions {
     public void click_тестировщик_на_java() {
         testingCoursesPage.clickQAJA();
     }
-    @Then("click the button Записаться на курс")
-    public void clickTheButtonЗаписатьсяНаКурс() {
-        qajaCoursePage.applyForCourse();
+    @Then("assert that user got QAJA course page")
+    public void assertThatUserGotQAJACoursePage() {
+        qajaCoursePage.assertThatUserGotQAJACoursePage();
     }
     @Then("set name {string}")
     public void set_name(String name) {
@@ -66,6 +68,7 @@ public class StepDefinitions {
     public void set_email(String email) {
         qajaCoursePage.setEmail(email);
     }
+
     @Then("set phone number {string}")
     public void set_phone_number(String number) {
         qajaCoursePage.setPhoneNumber(number);
@@ -75,7 +78,7 @@ public class StepDefinitions {
     public void urlOfQAJACoursePage(String url) {
         qajaCoursePage.go(url);
     }
-    
+
     @When("the site is open click the button Записаться на курс")
     public void theSiteIsOpenClickTheButtonЗаписатьсяНаКурс() {
         qajaCoursePage.applyForCourse();
@@ -106,6 +109,11 @@ public class StepDefinitions {
         else {
             qajaCoursePage.assertUrlEqualsExpected(url);
         }
+    }
+
+    @Then("click the personal data protection regulation link")
+    public void clickThePersonalDataProtectionRegulationLink() {
+        qajaCoursePage.clickTheRegulationLink();
     }
 
     @Then("close the application form")
@@ -188,7 +196,7 @@ public class StepDefinitions {
         qajaCoursePage.assertUserGotErrorNotification();
     }
 
-    @Then("click the link Ипотека со ставкой 5%")
+    @When("the site is open click the link Ипотека со ставкой 5%")
     public void clickTheLinkИпотекаСоСтавкой() {
         qajaCoursePage.clickTheLinkИпотекаСоСтавкой();
     }
@@ -218,7 +226,7 @@ public class StepDefinitions {
         defermentOfMilitaryServiceDuringMobilisationPage.assertThatPageIsOpened(url);
     }
 
-    @Then("click the link Shopiland")
+    @When("the site is open click the link Shopiland")
     public void clickTheLinkShopiland() {
         qajaCoursePage.clickTheLinkShopiland();
     }
@@ -228,7 +236,6 @@ public class StepDefinitions {
         shopilandPage.assertThatUserGetsPage(url);
     }
 
-    @Then("enter name {string}")
     @When("the site is open enter name {string}")
     public void enterName(String name) {
         qajaCoursePage.enterName(name);
@@ -319,6 +326,16 @@ public class StepDefinitions {
         qajaCoursePage.clickTheButtonПолучитьПрограмму();
     }
 
+    @When("the site is open click the personal data protection regulation link")
+    public void theSiteIsOpenClickThePersonalDataProtectionRegulationLink() {
+        qajaCoursePage.clickTheLinkОбработкуПерсональныхДанных();
+    }
+
+    @Then("assert that user goes to the regulation page {string}")
+    public void assertThatUserGoesToTheRegulationPage(String url) {
+        personalDataProtectionRegulationPage.assertUrlEqualsExpected(url);
+    }
+
     @When("the site is open click the link {string}")
     public void theSiteIsOpenClickTheLinkПравилахАкции(String url) {
         qajaCoursePage.theSiteIsOpenClickTheLinkПравилахАкции(url);
@@ -338,5 +355,4 @@ public class StepDefinitions {
     public void assertThatUserSeesBlogPage(String url) {
         successStoriesPage.assertThatUserSeesBlogPage(url);
     }
-
 }
